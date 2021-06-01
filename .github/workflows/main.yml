@@ -25,4 +25,4 @@ jobs:
             StrictHostKeyChecking no
           END
       - name: Copy files over to server
-        run: scp -r ${{ github.workspace }} server:/~
+        run: scp -prq ${{ github.workspace }}/. server:/home/${{ secrets.SERVER_USER }}/ms-laurina/
