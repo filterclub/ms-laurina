@@ -30,4 +30,4 @@ jobs:
           SERVER_PORT: ${{ secrets.SERVER_PORT }}
           SERVER_PRIVATE_KEY: ${{ secrets.SERVER_PRIVATE_KEY }}
       - name: Copy files over to server
-        run: scp -r ${{ github.workspace }} staging:/~
+        run: scp -r ${{ github.workspace }} server:/~
