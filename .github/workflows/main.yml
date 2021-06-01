@@ -14,20 +14,15 @@ jobs:
       - name: Configure SSH to server
         run: |
           mkdir -p ~/.ssh/
-          echo "$SERVER_PRIVATE_KEY" > ~/.ssh/server.key
+          echo "${{ secrets.SERVER_PRIVATE_KEY }}" > ~/.ssh/server.key
           chmod 600 ~/.ssh/server.key
           cat >>~/.ssh/config <<END
           Host server
-            User $SERVER_USER
-            HostName $SERVER_HOST
-            Port $SERVER_PORT
+            User ${{ secrets.SERVER_USER }}
+            HostName ${{ secrets.SERVER_HOST }}
+            Port ${{ secrets.SERVER_PORT }}
             IdentityFile ~/.ssh/server.key
             StrictHostKeyChecking no
           END
-        env:
-          SERVER_USER: ${{ secrets.SERVER_USER }}
-          SERVER_HOST: ${{ secrets.SERVER_HOST }}
-          SERVER_PORT: ${{ secrets.SERVER_PORT }}
-          SERVER_PRIVATE_KEY: ${{ secrets.SERVER_PRIVATE_KEY }}
       - name: Copy files over to server
         run: scp -r ${{ github.workspace }} server:/~
