@@ -13,7 +13,7 @@ ShowUserTyping=true
 
 [telegram.daralo]
 Token="TELEGRAM_BOT_TOKEN_PLACEHOLDER"
-MessageFormat="HTMLNick"Te
+MessageFormat="HTMLNick"
 RemoteNickFormat="<b>{NICK}</b>  \n"
 DisableWebPagePreview=true
 
