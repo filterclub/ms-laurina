@@ -1,0 +1,39 @@
+name: CI
+on: [push, pull_request]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    steps:
+      - uses: actions/checkout@v2
+      - name: Prepare Matterbridge config file
+        run: |
+          cd 
+          sed -i \"s|DISCORD_BOT_TOKEN_PLACEHOLDER|${DISCORD_BOT_TOKEN}|g\" ${{ github.workspace }}/matterbridge/matterbridge.toml
+          sed -i \"s|SLACK_BOT_TOKEN_PLACEHOLDER|${SLACK_BOT_TOKEN}|g\" ${{ github.workspace }}/matterbridge/matterbridge.toml
+          sed -i \"s|TELEGRAM_BOT_TOKEN_PLACEHOLDER|${TELEGRAM_BOT_TOKEN}|g\" ${{ github.workspace }}/matterbridge/matterbridge.toml
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}      
+      - name: Configure SSH to server
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SERVER_PRIVATE_KEY" > ~/.ssh/server.key
+          chmod 600 ~/.ssh/server.key
+          cat >>~/.ssh/config <<END
+          Host server
+            User $SERVER_USER
+            HostName $SERVER_HOST
+            Port $SERVER_PORT
+            IdentityFile ~/.ssh/server.key
+            StrictHostKeyChecking no
+          END
+        env:
+          SERVER_USER: ${{ secrets.SERVER_USER }}
+          SERVER_HOST: ${{ secrets.SERVER_HOST }}
+          SERVER_PORT: ${{ secrets.SERVER_PORT }}
+          SERVER_PRIVATE_KEY: ${{ secrets.SERVER_PRIVATE_KEY }}
+      - name: Copy files over to server
+        run: scp -r ${{ github.workspace }} staging:/~
