@@ -8,10 +8,9 @@ jobs:
       - uses: actions/checkout@v2
       - name: Prepare Matterbridge config file
         run: |
-          cd 
-          sed -i \"s|DISCORD_BOT_TOKEN_PLACEHOLDER|${DISCORD_BOT_TOKEN}|g\" ${{ github.workspace }}/matterbridge/matterbridge.toml
-          sed -i \"s|SLACK_BOT_TOKEN_PLACEHOLDER|${SLACK_BOT_TOKEN}|g\" ${{ github.workspace }}/matterbridge/matterbridge.toml
-          sed -i \"s|TELEGRAM_BOT_TOKEN_PLACEHOLDER|${TELEGRAM_BOT_TOKEN}|g\" ${{ github.workspace }}/matterbridge/matterbridge.toml
+          sed -i \'s|DISCORD_BOT_TOKEN_PLACEHOLDER|${DISCORD_BOT_TOKEN}|g\' ${{ github.workspace }}/matterbridge/matterbridge.toml
+          sed -i \'s|SLACK_BOT_TOKEN_PLACEHOLDER|${SLACK_BOT_TOKEN}|g\' ${{ github.workspace }}/matterbridge/matterbridge.toml
+          sed -i \'s|TELEGRAM_BOT_TOKEN_PLACEHOLDER|${TELEGRAM_BOT_TOKEN}|g\' ${{ github.workspace }}/matterbridge/matterbridge.toml
         env:
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
