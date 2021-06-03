@@ -13,10 +13,9 @@ ShowUserTyping=true
 
 [telegram.daralo]
 Token="TELEGRAM_BOT_TOKEN_PLACEHOLDER"
-MessageFormat="HTML"
-QuoteFormat="{MESSAGE}\n\n<pre><b>QUOTENICK</b>\n<code>{QUOTEMESSAGE}</code></pre>"
-RemoteNickFormat="<b>{NICK}</b>\n"
-DisableWebPagePreview=true
+MessageFormat="MarkdownV2"
+QuoteFormat="{MESSAGE}\n\n```\n*{QUOTENICK}*\n{QUOTEMESSAGE}\n```"
+RemoteNickFormat="*NICK*\n"
 
 
 [general]
