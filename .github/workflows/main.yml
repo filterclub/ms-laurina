@@ -27,4 +27,4 @@ jobs:
       - name: Copy repo files over to server
         run: scp -prq ${{ github.workspace }} server:~/ms-laurina
       - name: Start service
-        run: ssh server 'cd ms-laurina && docker-compose up -d'
+        run: ssh server 'cd ~/ms-laurina && docker-compose down && docker-compose up'
