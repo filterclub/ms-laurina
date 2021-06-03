@@ -14,7 +14,7 @@ ShowUserTyping=true
 [telegram.daralo]
 Token="TELEGRAM_BOT_TOKEN_PLACEHOLDER"
 MessageFormat="MarkdownV2"
-QuoteFormat="{MESSAGE}\n\n```\n*{QUOTENICK}*\n{QUOTEMESSAGE}\n```"
+QuoteFormat="{MESSAGE}\n\n>>> **{QUOTENICK}**\n{QUOTEMESSAGE}"
 RemoteNickFormat="*NICK*\n"
 
 
