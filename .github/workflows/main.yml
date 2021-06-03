@@ -26,5 +26,7 @@ jobs:
           END
       - name: Copy repo files over to server
         run: scp -prq ${{ github.workspace }} server:~/ms-laurina
+      - name: Stop previous service instance
+        run: ssh server 'cd ~/ms-laurina && docker-compose down'
       - name: Start service
-        run: ssh server 'cd ~/ms-laurina && docker-compose down && docker-compose up'
+        run: ssh server 'cd ~/ms-laurina && docker-compose up -d'
