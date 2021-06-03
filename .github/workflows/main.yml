@@ -11,6 +11,8 @@ jobs:
           sed -i -- 's/DISCORD_BOT_TOKEN_PLACEHOLDER/${{ secrets.DISCORD_BOT_TOKEN }}/g' ${{ github.workspace }}/matterbridge/matterbridge.toml
           sed -i -- 's/SLACK_BOT_TOKEN_PLACEHOLDER/${{ secrets.SLACK_BOT_TOKEN }}/g' ${{ github.workspace }}/matterbridge/matterbridge.toml
           sed -i -- 's/TELEGRAM_BOT_TOKEN_PLACEHOLDER/${{ secrets.TELEGRAM_BOT_TOKEN }}/g' ${{ github.workspace }}/matterbridge/matterbridge.toml      
+      - name: Remove .git from repo directory
+        run: rm -rf ${{ github.workspace }}/.git
       - name: Configure SSH to server
         run: |
           mkdir -p ~/.ssh/
