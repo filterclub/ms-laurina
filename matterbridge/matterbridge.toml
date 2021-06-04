@@ -2,20 +2,20 @@
 Token="DISCORD_BOT_TOKEN_PLACEHOLDER"
 Server="826451327768592415"
 AutoWebhooks=true
-RemoteNickFormat="{NICK}"
+RemoteNickFormat="*{NICK}*\n"
 UseLocalAvatar=["slack.filterclub-hu", "telegram.daralo"]
 
 [slack.filterclub-hu]
 Token="SLACK_BOT_TOKEN_PLACEHOLDER"
-RemoteNickFormat="{NICK}"
+RemoteNickFormat="*{NICK}*\n"
 PreserveThreading=true
 ShowUserTyping=true
 
 [telegram.daralo]
 Token="TELEGRAM_BOT_TOKEN_PLACEHOLDER"
 MessageFormat="MarkdownV2"
-QuoteFormat="{MESSAGE}\n\n>>> **{QUOTENICK}**\n{QUOTEMESSAGE}"
-RemoteNickFormat="*NICK*\n"
+QuoteFormat="{MESSAGE}\n\n\n>>> *{QUOTENICK}*\n{QUOTEMESSAGE}"
+RemoteNickFormat="*{NICK}*\n"
 
 
 [general]
