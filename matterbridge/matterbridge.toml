@@ -2,12 +2,12 @@
 Token="DISCORD_BOT_TOKEN_PLACEHOLDER"
 Server="826451327768592415"
 AutoWebhooks=true
-RemoteNickFormat="*{NICK}*\n"
+RemoteNickFormat="{NICK}\n"
 UseLocalAvatar=["slack.filterclub-hu", "telegram.daralo"]
 
 [slack.filterclub-hu]
 Token="SLACK_BOT_TOKEN_PLACEHOLDER"
-RemoteNickFormat="*{NICK}*\n"
+RemoteNickFormat="{NICK}\n"
 PreserveThreading=true
 ShowUserTyping=true
 
