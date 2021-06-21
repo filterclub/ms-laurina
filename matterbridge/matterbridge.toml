@@ -15,6 +15,7 @@ ShowUserTyping=true
 [telegram.daralo]
 Token="TELEGRAM_BOT_TOKEN_PLACEHOLDER"
 MessageFormat="MarkdownV2"
+RemoteNickFormat="*{NICK}*\n"
 QuoteFormat="{MESSAGE}\n\n\n>>> *{QUOTENICK}*\n{QUOTEMESSAGE}"
 ShowJoinPart=true
 DisableWebPagePreview=false
@@ -22,7 +23,7 @@ UseInsecureURL=true
 
 
 [general]
-RemoteNickFormat="{NICK} "
+RemoteNickFormat="{NICK}"
 MediaDownloadSize=10000000
 
 
