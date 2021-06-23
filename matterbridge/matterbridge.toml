@@ -8,7 +8,7 @@ Token="SLACK_BOT_TOKEN_PLACEHOLDER"
 
 [telegram.daralo]
 Token="TELEGRAM_BOT_TOKEN_PLACEHOLDER"
-RemoteNickFormat=<b>{NICK}</b>\n"
+RemoteNickFormat="<b>{NICK}</b>\n"
 MessageFormat="HTML"
 QuoteFormat="{MESSAGE}\n\n\n>>> *{QUOTENICK}*\n{QUOTEMESSAGE}"
 
