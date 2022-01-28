@@ -26,6 +26,8 @@ jobs:
             IdentityFile ~/.ssh/server.key
             StrictHostKeyChecking no
           END
+      - name: Stop service
+        run: ssh server 'cd ~/ms-laurina/ && docker-compose down'
       - name: Copy files over to server
         run: scp -prq ${{ github.workspace }} server:~/
       - name: Start service
