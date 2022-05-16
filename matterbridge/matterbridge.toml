@@ -2,6 +2,8 @@
 Token="DISCORD_BOT_TOKEN_PLACEHOLDER"
 Server="826451327768592415"
 AutoWebhooks=true
+UseLocalAvatar=["telegram.daralo"]
+ShowEmbeds=true
 
 [slack.filterclub-hu]
 Token="SLACK_BOT_TOKEN_PLACEHOLDER"
@@ -10,12 +12,14 @@ Token="SLACK_BOT_TOKEN_PLACEHOLDER"
 Token="TELEGRAM_BOT_TOKEN_PLACEHOLDER"
 RemoteNickFormat="<b>{NICK}</b>\n"
 MessageFormat="HTML"
-QuoteFormat="{MESSAGE}\n\n\n>>> *{QUOTENICK}*\n{QUOTEMESSAGE}"
+QuoteFormat="{MESSAGE}\n\n>>> *{QUOTENICK}*\n{QUOTEMESSAGE}"
+DisableWebPagePreview=false
+UseFullName=true
+
 
 [general]
 RemoteNickFormat="{NICK}"
 MediaDownloadSize=10000000
-
 
 [[gateway]]
 name="fc-hu-beans"
