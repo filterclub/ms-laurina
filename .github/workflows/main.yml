@@ -27,8 +27,8 @@ jobs:
             StrictHostKeyChecking no
           END
       - name: Stop service
-        run: ssh server 'if [ ~/ms-laurina/docker-compose top | grep matterbridge ]; then ~/ms-laurina/docker-compose down -v; fi'
+        run: ssh server 'if [ /srv/@filterclub/ms-laurina/docker-compose top | grep matterbridge ]; then /srv/@filterclub/ms-laurina/docker-compose down -v; fi'
       - name: Copy files over to server
-        run: scp -prq ${{ github.workspace }} server:~/
+        run: scp -prq ${{ github.workspace }} server:/srv/@filterclub/
       - name: Start service
-        run: ssh server 'cd ~/ms-laurina/ && docker-compose up -d'
+        run: ssh server 'cd /srv/@filterclub/ms-laurina/ && docker-compose up -d'
