@@ -3,15 +3,22 @@ Token="DISCORD_BOT_TOKEN_PLACEHOLDER"
 Server="826451327768592415"
 AutoWebhooks=true
 UseLocalAvatar=["telegram.daralo"]
+ShowJoinPart=false
+ShowTopicChange=false
 ShowEmbeds=true
+SyncTopic=false
+PreserveThreading=true
 
 [telegram.daralo]
 Token="TELEGRAM_BOT_TOKEN_PLACEHOLDER"
 RemoteNickFormat="<b>{NICK}</b>\n"
 MessageFormat="HTML"
-QuoteFormat="{MESSAGE}\n\n>>> *{QUOTENICK}*\n{QUOTEMESSAGE}"
+QuoteFormat="{MESSAGE}\n\n>>> {QUOTEMESSAGE}"
 DisableWebPagePreview=false
 UseFullName=true
+ShowJoinPart=false
+ShowTopicChange=false
+PreserveThreading=true
 
 [general]
 RemoteNickFormat="{NICK}"
