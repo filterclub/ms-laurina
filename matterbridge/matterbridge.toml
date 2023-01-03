@@ -20,7 +20,7 @@ ShowTopicChange=false
 PreserveThreading=true
 
 [general]
-RemoteNickFormat="*{NICK}* \n"
+RemoteNickFormat="**{NICK}** \n"
 MediaDownloadSize=10000000
 
 [[gateway]]
