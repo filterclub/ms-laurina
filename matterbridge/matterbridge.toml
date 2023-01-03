@@ -1,7 +1,7 @@
 [discord.filterclub]
 AutoWebhooks=true
 PreserveThreading=true
-RemoteNickFormat="<b>{NICK}</b>\n"
+RemoteNickFormat="{NICK}\n"
 Server="826451327768592415"
 ShowEmbeds=true
 ShowJoinPart=false
