@@ -20,7 +20,6 @@ ShowJoinPart=false
 ShowTopicChange=false
 Token="TELEGRAM_BOT_TOKEN_PLACEHOLDER"
 UseFullName=true
-UseLocalAvatar=["discord.filterclub"]
 
 [general]
 MediaDownloadSize=10000000
