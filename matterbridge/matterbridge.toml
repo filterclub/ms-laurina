@@ -13,7 +13,7 @@ UseLocalAvatar=["telegram"]
 [telegram.daralo]
 MessageFormat="HTML"
 PreserveThreading=true
-QuoteFormat="{MESSAGE}\n\n>>>{QUOTEMESSAGE}"
+QuoteFormat="{MESSAGE} \r\n>>> {QUOTEMESSAGE}"
 RemoteNickFormat="<b>{NICK}</b> <i>@ Discord</i> \r\n"
 ShowJoinPart=false
 ShowTopicChange=false
