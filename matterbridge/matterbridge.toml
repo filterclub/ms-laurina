@@ -8,17 +8,16 @@ ShowJoinPart=false
 ShowTopicChange=false
 SyncTopic=false
 Token="DISCORD_BOT_TOKEN_PLACEHOLDER"
+UseLocalAvatar=["telegram"] 
 
 [telegram.daralo]
-DisableWebPagePreview=false
 MessageFormat="MarkdownV2"
 PreserveThreading=true
 QuoteFormat="{MESSAGE}\n\n>>> {QUOTEMESSAGE}"
-RemoteNickFormat="*{NICK}* (@ Discord)\n"
+RemoteNickFormat="*{NICK}* \(@ _Discord_\)\n"
 ShowJoinPart=false
 ShowTopicChange=false
 Token="TELEGRAM_BOT_TOKEN_PLACEHOLDER"
-UseFullName=false
 
 [general]
 MediaDownloadSize=10000000
