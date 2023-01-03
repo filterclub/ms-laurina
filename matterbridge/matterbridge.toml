@@ -14,10 +14,11 @@ UseLocalAvatar=["telegram"]
 MessageFormat="HTMLNick"
 PreserveThreading=true
 QuoteFormat="{MESSAGE}"
-RemoteNickFormat="<b>{NICK}</b> <i>@ Discord</i>\r\n"
+RemoteNickFormat="<b>{NICK}</b> @ Discord\r\n"
 ShowJoinPart=false
 ShowTopicChange=false
 Token="TELEGRAM_BOT_TOKEN_PLACEHOLDER"
+UseFullName=true
 
 [general]
 MediaDownloadSize=10000000
