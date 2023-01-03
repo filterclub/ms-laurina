@@ -1,25 +1,24 @@
 [discord.filterclub]
 AutoWebhooks=true
 PreserveThreading=true
-RemoteNickFormat="{NICK} (on Telegram)\n"
+RemoteNickFormat="{NICK} (@ Telegram)\n"
 Server="826451327768592415"
 ShowEmbeds=true
 ShowJoinPart=false
 ShowTopicChange=false
 SyncTopic=false
 Token="DISCORD_BOT_TOKEN_PLACEHOLDER"
-UseLocalAvatar=["telegram.daralo"]
 
 [telegram.daralo]
 DisableWebPagePreview=false
 MessageFormat="MarkdownV2"
 PreserveThreading=true
-QuoteFormat="{MESSAGE}\n>>> {QUOTEMESSAGE}"
-RemoteNickFormat="*{NICK}* (on Discord)\n"
+QuoteFormat="{MESSAGE}\n\n>>> {QUOTEMESSAGE}"
+RemoteNickFormat="*{NICK}* (@ Discord)\n"
 ShowJoinPart=false
 ShowTopicChange=false
 Token="TELEGRAM_BOT_TOKEN_PLACEHOLDER"
-UseFullName=true
+UseFullName=false
 
 [general]
 MediaDownloadSize=10000000
