@@ -13,8 +13,8 @@ UseLocalAvatar=["telegram"]
 [telegram.daralo]
 MessageFormat="MarkdownV2"
 PreserveThreading=true
-QuoteFormat="{MESSAGE}\n\n>>> {QUOTEMESSAGE}"
-RemoteNickFormat="*{NICK}* \(@ _Discord_\) \n"
+QuoteFormat="{MESSAGE}\n\n>>>{QUOTEMESSAGE}"
+RemoteNickFormat="*{NICK}* \(@ Discord\) \n"
 ShowJoinPart=false
 ShowTopicChange=false
 Token="TELEGRAM_BOT_TOKEN_PLACEHOLDER"
