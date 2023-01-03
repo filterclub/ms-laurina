@@ -11,7 +11,7 @@ Token="DISCORD_BOT_TOKEN_PLACEHOLDER"
 UseLocalAvatar=["telegram"] 
 
 [telegram.daralo]
-MessageFormat="HTML"
+MessageFormat="HTMLNick"
 PreserveThreading=true
 QuoteFormat="{MESSAGE} \r\n>>> {QUOTEMESSAGE}"
 RemoteNickFormat="<b>{NICK}</b> <i>@ Discord</i> \r\n"
