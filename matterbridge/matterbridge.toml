@@ -11,9 +11,8 @@ PreserveThreading=true
 
 [telegram.daralo]
 Token="TELEGRAM_BOT_TOKEN_PLACEHOLDER"
-RemoteNickFormat="<b>{NICK}</b>\n"
-MessageFormat="HTML"
-QuoteFormat="{MESSAGE}\n\n>>> {QUOTEMESSAGE}"
+MessageFormat="MarkdownV2"
+QuoteFormat="{MESSAGE}\n>>> {QUOTEMESSAGE}"
 DisableWebPagePreview=false
 UseFullName=true
 ShowJoinPart=false
@@ -21,7 +20,7 @@ ShowTopicChange=false
 PreserveThreading=true
 
 [general]
-RemoteNickFormat="{NICK}"
+RemoteNickFormat="*{NICK}* \n"
 MediaDownloadSize=10000000
 
 [[gateway]]
