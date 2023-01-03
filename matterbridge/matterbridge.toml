@@ -1,7 +1,7 @@
 [discord.filterclub]
 AutoWebhooks=true
 PreserveThreading=true
-RemoteNickFormat="{NICK} (on {PROTOCOL})\n"
+RemoteNickFormat="{NICK} (on Telegram)\n"
 Server="826451327768592415"
 ShowEmbeds=true
 ShowJoinPart=false
@@ -15,7 +15,7 @@ DisableWebPagePreview=false
 MessageFormat="MarkdownV2"
 PreserveThreading=true
 QuoteFormat="{MESSAGE}\n>>> {QUOTEMESSAGE}"
-RemoteNickFormat="*{NICK}* (on _{PROTOCOL}_)\n"
+RemoteNickFormat="*{NICK}* (on Discord)\n"
 ShowJoinPart=false
 ShowTopicChange=false
 Token="TELEGRAM_BOT_TOKEN_PLACEHOLDER"
