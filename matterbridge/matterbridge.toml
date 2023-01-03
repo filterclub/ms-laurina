@@ -1,25 +1,26 @@
 [discord.filterclub]
-Token="DISCORD_BOT_TOKEN_PLACEHOLDER"
-Server="826451327768592415"
 AutoWebhooks=true
-UseLocalAvatar=["telegram.daralo"]
+PreserveThreading=true
 RemoteNickFormat="{NICK}\n"
+Server="826451327768592415"
+ShowEmbeds=true
 ShowJoinPart=false
 ShowTopicChange=false
-ShowEmbeds=true
 SyncTopic=false
-PreserveThreading=true
+Token="DISCORD_BOT_TOKEN_PLACEHOLDER"
+UseLocalAvatar=["telegram.daralo"]
 
 [telegram.daralo]
-Token="TELEGRAM_BOT_TOKEN_PLACEHOLDER"
-RemoteNickFormat="*{NICK}*\n"
-MessageFormat="MarkdownV2"
-QuoteFormat="{MESSAGE}\n>>> {QUOTEMESSAGE}"
 DisableWebPagePreview=false
-UseFullName=true
+MessageFormat="MarkdownV2"
+PreserveThreading=true
+QuoteFormat="{MESSAGE}\n>>> {QUOTEMESSAGE}"
+RemoteNickFormat="*{NICK}*\n"
 ShowJoinPart=false
 ShowTopicChange=false
-PreserveThreading=true
+Token="TELEGRAM_BOT_TOKEN_PLACEHOLDER"
+UseFullName=true
+UseLocalAvatar=["discord.filterclub"]
 
 [general]
 MediaDownloadSize=10000000
