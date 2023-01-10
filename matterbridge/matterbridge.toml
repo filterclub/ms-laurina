@@ -1,7 +1,7 @@
 [discord.filterclub]
 AutoWebhooks=true
 PreserveThreading=true
-RemoteNickFormat="{NICK} @ Telegram\r\n"
+RemoteNickFormat="{NICK}\r\n"
 Server="826451327768592415"
 ShowEmbeds=true
 ShowJoinPart=false
@@ -11,14 +11,15 @@ Token="DISCORD_BOT_TOKEN_PLACEHOLDER"
 UseLocalAvatar=["telegram"] 
 
 [telegram.daralo]
-MessageFormat="HTMLNick"
+MessageFormat="HTML"
 PreserveThreading=true
 QuoteFormat="{MESSAGE}"
-RemoteNickFormat="<b>{NICK}</b> @ Discord\r\n"
+RemoteNickFormat="<b>{NICK}</b>\r\n"
 ShowJoinPart=false
 ShowTopicChange=false
 Token="TELEGRAM_BOT_TOKEN_PLACEHOLDER"
 UseFullName=true
+UseLocalAvatar=["discord"] 
 
 [general]
 MediaDownloadSize=10000000
